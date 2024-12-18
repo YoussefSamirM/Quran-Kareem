@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+  background-color: #eee;
+}
+
+.loading {
+  height: 100vh;
+}
+
+.loading img {
+  animation: load alternate 0.8s both ease-in-out infinite;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.space-image {
+  width: 100vw;
+}
+
+.header {
+  padding: 10px 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header .logo img {
+  width: 75px;
+}
+
+.header .bar {
+  font-size: 20px;
+  padding: 5px 12px;
+  background-color: #ddd;
+  width: fit-content;
+  border-radius: 10px;
+  display: none;
+}
+
+.header .nav {
+  z-index: 5;
+  display: flex;
+}
+
+.header .nav li {
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.landing {
+  width: 100vw;
+  height: calc(100vh - 95px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.landing::before {
+  content: "";
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(80%);
+  background-image: url("../Images/pexels-maahidphotos-3881104.jpg");
+}
+
+.landing h1:last-child {
+  margin-top: 20px;
+}
+
+.quran {
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+
+.quran h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.quran form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 30px;
+}
+
+select {
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  border: 1px solid #ddd;
+  padding: 15px !important;
+  border-radius: 10px;
+  background-color: #ddd;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+@media (max-width: 769px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .landing {
+    padding: 0 20px;
+  }
+
+  .quran {
+    padding: 0 20px;
+  }
+
+  .header .bar {
+    display: block;
+  }
+
+  .header .nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: -20px;
+    top: 58px;
+    text-align: right;
+    background-color: #eee;
+    width: 100vw;
+    gap: 40px;
+    transition: all 0.3s ease-in;
+    padding: 20px 10px;
+  }
+
+  .hiddend {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .visibled {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 355px) {
+  .quran form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.quran audio {
+  width: 100%;
+  margin: 50px auto 0;
+  border-radius: 10px;
+}
+
+.space-image.live-space {
+  background-color: #ddd;
+}
+
+.live {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  margin: auto;
+  max-width: 1300px;
+}
+
+.live h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.live .start-live {
+  display: flex;
+  gap: 20px;
+}
+
+.live .start-live a {
+  font-size: 21px;
+  background-color: #002147;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  word-break: break-all;
+  text-align: center;
+}
+
+.live .video-live {
+  margin-top: 30px;
+}
+
+.live .video-live video {
+  width: 800px;
+  border-radius: 10px;
+}
+
+.radio {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  margin: auto;
+  max-width: 1300px;
+}
+
+.radio h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.radio audio {
+  margin: 50px auto 0;
+  border-radius: 10px;
+  width: 88.735vw;
+  max-width: 1300px;
+}
+
+.footer-space {
+  background-color: #002147;
+}
+
+footer {
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  max-width: 1300px;
+  word-break: break-all;
+}
+
+footer span {
+  font-weight: 500;
+}

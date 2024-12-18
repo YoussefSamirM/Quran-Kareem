@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>القرآن الكريم</title>
+    <link rel="stylesheet" href="Style/style.css" />
+    <link rel="icon" href="Images/Quran_kareem.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awseome -->
+    <script
+      src="https://kit.fontawesome.com/f6cbace198.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- HLS.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  </head>
+  <body>
+    <div class="loading flex justify-center items-center">
+      <img src="Images/Quran_kareem.png" width="150px" alt="" />
+    </div>
+    <div class="container">
+      <div class="space-image">
+        <div class="header flex justify-between items-center">
+          <div class="logo">
+            <a href="#home">
+              <img src="Images/Quran_kareem.png" alt="" />
+            </a>
+          </div>
+          <div class="nav-bar relative">
+            <div class="bar cursor-pointer">
+              <i class="fa-solid fa-bars transition-all"></i>
+            </div>
+            <ul class="nav flex hiddend">
+              <li><a href="#home">الرئيسية</a></li>
+              <li><a href="#quran"> القرآن الكريم</a></li>
+              <li><a href="#live">بث مباشر</a></li>
+              <li><a href="#radio">راديو</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="landing" id="home">
+        <h1>
+          <img
+            src="https://nauthemes.net/html/jamia/assets/images/resources/bsml-txt.png"
+            alt=""
+          />
+        </h1>
+        <h1>
+          <img
+            src="https://nauthemes.net/html/jamia/assets/images/resources/ayat-txt.png"
+            alt=""
+          />
+        </h1>
+      </div>
+      <div class="space-image">
+        <div class="quran" id="quran">
+          <h1>القرآن الكريم</h1>
+          <form action="">
+            <fieldset>
+              <select class="reciter" name="" id="">
+                <option value="" selected disabled hidden>أختر القارئ</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <select class="riwaya" name="" id="">
+                <option value="" selected disabled hidden>أختر الرواية</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <select class="surah" name="" id="">
+                <option value="" selected disabled hidden>أختر السورة</option>
+              </select>
+            </fieldset>
+          </form>
+          <audio src="" controls autoplay>
+            <source src="" type="audio/mpeg" />
+            <source src="" type="audio/ogg" />
+          </audio>
+        </div>
+      </div>
+      <div class="space-image live-space">
+        <div class="live" id="live">
+          <h1>البث المباشر</h1>
+          <div class="start-live">
+            <a
+              href="javascript:void()"
+              onclick="playLive(`https://win.holol.com/live/quran/playlist.m3u8`)"
+              >قناة القرآن الكريم 2</a
+            >
+            <a
+              href="javascript:void()"
+              onclick="playLive(`https://win.holol.com/live/quran/playlist.m3u8`)"
+              >قناة القرآن الكريم 1</a
+            >
+          </div>
+          <div class="video-live">
+            <video
+              src=""
+              controls
+              autoplay
+              poster="Images/pexels-mustafa-fathy-3793631-5620451.jpg"
+            >
+              <source src="" type="video/mp4" />
+              <source src="" type="video/ogg" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="space-image">
+        <div class="radio" id="radio">
+          <h1>الراديو</h1>
+          <div class="radio-start">
+            <audio
+              src="https://Qurango.net/radio/ahmad_khader_altarabulsi"
+              controls
+            >
+              <source src="" type="audio/mpeg" />
+              <source src="" type="audio/ogg" />
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="space-image footer-space">
+        <footer class="flex justify-center items-center text-white text-center">
+          <p>
+            This website was designed and developed by
+            <span>Youssef Samir</span>. All rights reserved © 2024 ❤️
+          </p>
+        </footer>
+      </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
